@@ -34,7 +34,6 @@
     "release-minor": "npm run standard-version -- --release-as minor && npm run release-generic",
     "release-major": "npm run standard-version -- --release-as major && npm run release-generic"
   },
-  "type": "module",
   "author": "Stefan Pfaffel <spfaffel@gmail.com>",
   "license": "MIT",
   "dependencies": {
