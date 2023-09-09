@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Checkout | Poodle Tweet Scheduler</title>
+    <!-- @amy import fragments/commons/meta.html-->
+    <!-- @amy import fragments/commons/css.html -->
+</head>
+
+<style>
+    iframe {
+        font-family: "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji";
+        min-width: 40rem;
+        background-color: transparent;
+        border: none;
+        margin: auto;
+    }
+</style>
+
+<script src="https://cdn.paddle.com/paddle/paddle.js" crossorigin=""></script>
+
+<body>
+    <div class="content min-h-screen">
+        <header class="flex px-4 sm:px-6 mt-6 text-2xl">
+            <a class="flex-initial whitespace-nowrap" href="/" class="leading-5 font-base flex-grow">
+                <p>
+                    <span class="font-medium tracking-wide" id="title">poodle</span><span
+                        class="font-normal text-gray-700">.io</span>
+                </p>
+            </a>
+            <div class="flex-grow"></div>
+     
+            <main class="p-4 flex flex-col justify-center">
+                <div class="paddle"></div>
+            </main>
+            
+        </header>
+        <app-checkout-page />
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    ((window) => {
+        'use strict'
+
+        const searchParams = new URLSearchParams(location.search)
+        console.log({searchParams})
+        const id = searchParams.get('id')
+        const vendor = parseInt(searchParams.get('vendorId'))
+        const product = parseInt(searchParams.get('productId'))
+        console.log({id,vendor,product})
+        Paddle.Environment.set('sandbox');
+
+        const paddleCheckoutTimeout = window.setTimeout(() => {
+            document.querySelector('#waitingForPaddle').classList.add('hidden')
+            document.querySelector('#paddleError').classList.remove('hidden')
+        }, 15_000);
+
+        const updatePrices = (data) => {
+            const recurringCurrency = data.eventData.checkout.recurring_prices.customer.currency
+            const recurringTotal = data.eventData.checkout.recurring_prices.customer.total
+            const intervalType = data.eventData.checkout.recurring_prices.interval.type
+
+            window.document.querySelectorAll('.price-currency').forEach(element => {
+                element.textContent = recurringCurrency + ' '
+            })
+
+            window.document.querySelectorAll('.price-interval').forEach(element => {
+                element.textContent = intervalType
+            })
+
+            window.document.querySelectorAll('.price-total').forEach(element => {
+                element.textContent = recurringTotal
+            })
+        }
+
+        Paddle.Setup({
+            vendor,
+            completeDetails: true,
+            eventCallback: function (data) {
+                console.log('eventCallback', data.event)
+                // The data.event will specify the event type
+                if (data.event === "Checkout.Loaded") {
+                    updatePrices(data)
+
+                    window.clearTimeout(paddleCheckoutTimeout)
+
+                    console.log(data.eventData); // Data specifics on the event
+                }
+                // The data.event will specify the event type
+                if (data.event === "Checkout.Complete") {
+                    document.querySelector('#paddleSuccess').hidden = false
+                }
+                else if (data.event === "Checkout.Close") {
+                    console.log(data.eventData); // Data specifics on the event
+                }
+            }
+        })
+
+        const passthrough = {}
+
+        Paddle.Checkout.open({
+            method: 'inline',
+            product,       // Replace with your Product or Plan ID
+            email: id + '@example.com',
+            postcode: 85080,
+            customData: passthrough,
+            allowQuantity: false,
+            disableLogout: true,
+            passthrough,
+            frameTarget: 'paddle', // The className of your checkout <div>
+            frameInitialHeight: 500,
+            frameStyle: 'position: relative;',    // Please ensure the minimum width is kept at or above 286px with checkout padding disabled, or 312px with checkout padding enabled. See "General" section under "Branded Inline Checkout" below for more information on checkout padding.
+            successCallback: function (data) {
+                const checkoutId = data.checkout.id;
+
+                Paddle.Order.details(checkoutId, function (data) {
+                    testCallback(data)
+                })
+            },
+        })
+    })(window)
+</script>
