@@ -1,0 +1,25 @@
+name: tests
+on:
+  push:
+    
+jobs:
+  build:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v4.0.0
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - run: npm ci
+
+    - name: Test 
+      run: ./scripts/test-api.sh

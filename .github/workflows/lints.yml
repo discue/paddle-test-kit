@@ -1,0 +1,33 @@
+name: lints
+on:
+  pull_request:
+    branches-ignore:
+      - dependabot/**
+  push:
+    paths-ignore: []
+    branches-ignore: []
+    tags-ignore:
+      - "*"
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  js:
+    if: "!(contains(github.event.head_commit.message, 'Merge') && contains(github.event.head_commit.message, '/dependabot/')) && ${{ github.actor != 'dependabot[bot]' }}"
+    timeout-minutes: 10
+    # Name the Job
+    name: javascript
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v4.0.0
+
+      - name: node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+
+      - name: Run ESLint
+        run: npx eslint -c .eslintrc.cjs lib --ext .js,.jsx,.ts,.tsx
