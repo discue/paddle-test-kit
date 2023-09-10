@@ -34,8 +34,6 @@ npm install @discue/paddle-test-kit
 ### Creating a new subscription
 The module is able to create a new Paddle subscription for a given `vendor_id`. The module will start a puppeteer instance in the background, generate a checkout page with `inline` mode and finish the checkout process. 
 
-For the webhooks integration to work and to be able to correlate incoming hooks with the correct subscription, a placeholder needs to be created **before the checkout** and - afterward - a specific value must be passed to the [Checkout API](https://developer.paddle.com/guides/ZG9jOjI1MzU0MDQz-pass-parameters-to-the-checkout) via the `passthrough` parameter. This value will be returned by the `addSubscriptionPlaceholder` method.
-
 ```js
 'use strict'
 
