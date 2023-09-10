@@ -38,6 +38,9 @@ For the webhooks integration to work and to be able to correlate incoming hooks 
 
 ```js
 'use strict'
+
+const { createActivePaddleSubscription } = require('../lib/index.js')
+
 const productId = 36631 // the product id is vendor specific
 const vendorId = process.env.VENDOR_ID
 
@@ -47,6 +50,17 @@ const { checkout, order } = await createActivePaddleSubscription({
 })
 
 const { subscription_id } = order
+```
+
+### Removing test subscriptions
+The exported function `cancelTestSubscriptions` cancels all active subscriptions created by this module.
+
+```js
+'use strict'
+
+const { cancelTestSubscriptions } = require('../lib/index.js')
+
+await cancelTestSubscriptions() // requires env var AUTH_CODE
 ```
 
 ## License
