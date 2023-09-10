@@ -1,9 +1,11 @@
 const { expect } = require('chai')
-const { createActivePaddleSubscription } = require('../lib/index.js')
+const { createActivePaddleSubscription, cancelTestSubscriptions } = require('../lib/index.js')
 
 describe('CreateSubscription', () => {
     const productId = 36631
     const vendorId = process.env.VENDOR_ID
+
+    after(cancelTestSubscriptions)
 
     it('returns the checkout object', async () => {
         const { checkout, order } = await createActivePaddleSubscription({
@@ -36,6 +38,7 @@ describe('CreateSubscription', () => {
         expect(order.completed.timezone_type).to.be.a('number')
         new URL(order.receipt_url)
         expect(order.customer_success_redirect_url).to.be.empty
+        expect(order.customer.email).to.match(/@dsq-paddle-test-kit.com$/)
         expect(order.is_subscription).to.be.true
         expect(order.product_id).to.equal(productId)
         expect(order.subscription_id).to.be.a('number')
