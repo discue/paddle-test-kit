@@ -27,7 +27,7 @@
     "lint-test": "npx eslint -c .eslintrc.cjs test --ext .js,.jsx,.ts,.tsx",
     "standard-version": "standard-version",
     "remove-types": "find lib -name \"*.d.ts\" -type f -delete",
-    "create-types": "npx tsc lib/index.js --declaration --emitDeclarationOnly --allowJs",
+    "create-types": "npx tsc lib/index.js --declaration --emitDeclarationOnly --target es2015 --allowJs",
     "publish-version": "npm publish --access public",
     "push-tags": "git push --follow-tags origin main",
     "release-generic": "npm run push-tags && npm run create-types && npm run publish-version && npm run remove-types",
