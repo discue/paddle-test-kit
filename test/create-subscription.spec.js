@@ -4,8 +4,13 @@ const { createActivePaddleSubscription, cancelTestSubscriptions } = require('../
 describe('CreateSubscription', () => {
     const productId = 36631
     const vendorId = process.env.VENDOR_ID
+    const authCode = process.env.AUTH_CODE
 
-    after(cancelTestSubscriptions)
+    after(() => {
+        return cancelTestSubscriptions({
+            vendorId, authCode
+        })
+    })
 
     it('returns the checkout object', async () => {
         const { checkout, order } = await createActivePaddleSubscription({

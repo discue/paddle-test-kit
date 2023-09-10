@@ -60,7 +60,12 @@ The exported function `cancelTestSubscriptions` cancels all active subscriptions
 
 const { cancelTestSubscriptions } = require('../lib/index.js')
 
-await cancelTestSubscriptions() // requires env var AUTH_CODE
+const vendorId = process.env.VENDOR_ID
+const authCode = process.env.AUTH_CODE
+
+await cancelTestSubscriptions({
+    vendorId, authCode
+})
 ```
 
 ## License
