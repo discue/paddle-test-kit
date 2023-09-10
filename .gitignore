@@ -1,3 +1,5 @@
+test-local.sh
+
 *.d.ts
 *.secret
 
