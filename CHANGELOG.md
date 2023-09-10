@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/discue/paddle-test-kit/issues/compare/v0.1.0...v0.2.0) (2023-09-10)
+
+
+### Features
+
+* make cancel fn accept vendor id and auth code ([156587d](https://github.com/discue/paddle-test-kit/issues/commit/156587dbde2ca94c8ddb3b7c2f4dafaef03f04d9))
+
+
+### Chores
+
+* **docs:** remove outdated block ([54cb4d4](https://github.com/discue/paddle-test-kit/issues/commit/54cb4d4a9cc7941dd7d566ca094c033f9c5ee97a))
+* **docs:** update docs ([752f546](https://github.com/discue/paddle-test-kit/issues/commit/752f5461aa2e13ea0eacfd1c5b183dd9d8b20854))
+* update create-types script ([00301f1](https://github.com/discue/paddle-test-kit/issues/commit/00301f1be3db7ab8cd2f4f062856984a39d41809))
+
 ## 0.1.0 (2023-09-10)
 
 
