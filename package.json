@@ -42,7 +42,7 @@
     "puppeteer": "21.5.1"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.9",
+    "@types/chai": "^4.3.11",
     "body-parser": "^1.20.2",
     "chai": "^4.3.10",
     "eslint": "^8.55.0",
