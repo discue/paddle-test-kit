@@ -50,6 +50,7 @@
         const id = searchParams.get('id')
         const vendor = parseInt(searchParams.get('vendorId'))
         const product = parseInt(searchParams.get('productId'))
+        const customData = decodeURIComponent(searchParams.get('customData'))
         console.log({id,vendor,product})
         Paddle.Environment.set('sandbox');
 
@@ -99,17 +100,15 @@
             }
         })
 
-        const passthrough = {}
-
         Paddle.Checkout.open({
             method: 'inline',
             product,       // Replace with your Product or Plan ID
             email: id + '@dsq-paddle-test-kit.com',
             postcode: 85080,
-            customData: passthrough,
+            customData,
             allowQuantity: false,
             disableLogout: true,
-            passthrough,
+            passthrough: customData,
             frameTarget: 'paddle', // The className of your checkout <div>
             frameInitialHeight: 500,
             frameStyle: 'position: relative;',    // Please ensure the minimum width is kept at or above 286px with checkout padding disabled, or 312px with checkout padding enabled. See "General" section under "Branded Inline Checkout" below for more information on checkout padding.
