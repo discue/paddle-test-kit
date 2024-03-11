@@ -24,6 +24,6 @@ jobs:
           ./changes_for_release_notes.sh > ./${RELEASE_NAME}.md
 
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           body_path: ./${{ env.RELEASE_NAME }}.md
