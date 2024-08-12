@@ -46,7 +46,7 @@
     "body-parser": "^1.20.2",
     "chai": "^4.3.10",
     "eslint": "^9.8.0",
-    "mocha": "^10.7.0",
+    "mocha": "^10.7.3",
     "nodemon": "^3.1.4",
     "nyc": "^17.0.0",
     "standard-version": "^9.5.0",
