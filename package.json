@@ -2,9 +2,6 @@
   "name": "@discue/paddle-test-utils",
   "version": "0.3.0",
   "description": "Set of functions to allow easier testing of paddle payments",
-  "engines": {
-    "node": "18"
-  },
   "files": [
     "lib",
     "*.md",
