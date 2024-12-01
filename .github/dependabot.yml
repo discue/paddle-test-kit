@@ -7,6 +7,8 @@ updates:
     schedule:
       interval: weekly
     versioning-strategy: increase
+    ignore:
+      - dependency-name: chai
 
   - package-ecosystem: github-actions
     assignees:
