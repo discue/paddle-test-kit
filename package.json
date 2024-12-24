@@ -34,7 +34,7 @@
   "author": "Stefan Pfaffel <spfaffel@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@discue/paddle-integration-mongodb": "0.26.0",
+    "@discue/paddle-integration-mongodb": "1.0.0",
     "express": "^4.21.2",
     "puppeteer": "23.11.1"
   },
