@@ -1,6 +1,10 @@
 name: tests
 on:
   push:
+
+concurrency: 
+  cancel-in-progress: true
+  group: paddle-test-kit
     
 jobs:
   build:
