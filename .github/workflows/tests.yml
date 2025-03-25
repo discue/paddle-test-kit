@@ -5,10 +5,10 @@ on:
 concurrency: 
   cancel-in-progress: true
   group: paddle-test-kit
-    
+
 jobs:
   build:
-    timeout-minutes: 15
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     strategy:
       matrix:
