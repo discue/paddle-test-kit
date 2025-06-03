@@ -36,7 +36,7 @@
   "dependencies": {
     "@discue/paddle-integration-mongodb": "0.26.0",
     "express": "^5.1.0",
-    "puppeteer": "24.9.0"
+    "puppeteer": "24.10.0"
   },
   "devDependencies": {
     "@types/chai": "^5.0.1",
