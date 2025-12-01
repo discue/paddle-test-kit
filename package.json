@@ -35,7 +35,7 @@
   "license": "MIT",
   "dependencies": {
     "@discue/paddle-integration-mongodb": "0.26.0",
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "puppeteer": "24.31.0"
   },
   "devDependencies": {
