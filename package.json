@@ -8,7 +8,9 @@
     "*.png"
   ],
   "exports": {
-    ".": "./lib/index.js"
+    ".": "./lib/classic/index.js",
+    "./classic": "./lib/classic/index.js",
+    "./billing": "./lib/billing/index.js"
   },
   "bugs": {
     "url": "https://github.com/discue/paddle-test-kit"
