@@ -32,7 +32,7 @@
   "dependencies": {
     "@discue/paddle-integration-mongodb": "0.26.0",
     "express": "^5.2.1",
-    "puppeteer": "24.40.0"
+    "puppeteer": "24.42.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
