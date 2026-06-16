@@ -37,7 +37,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/chai": "^5.2.3",
-    "body-parser": "^2.2.2",
+    "body-parser": "^2.3.0",
     "chai": "^4",
     "eslint": "^10.4.1",
     "globals": "^17.6.0",
