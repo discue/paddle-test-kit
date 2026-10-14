@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.0.0 (2026-10-14)
+
+
+### Features
+
+* allow clients to pass also customData string ([f5e39e8](https://github.com/discue/paddle-test-kit/commit/f5e39e8410f9ea4b4d443afbc28698ec306f509b))
+
+
+### Bug Fixes
+
+* waitForTimeout is not a function ([e8ab5de](https://github.com/discue/paddle-test-kit/commit/e8ab5de7417e3122e97f8501181f780712e5fa85))
+
 ## [0.4.0](https://github.com/discue/paddle-test-kit/issues/compare/v0.3.0...v0.4.0) (2025-03-25)
 
 
