@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.2](https://github.com/discue/paddle-test-kit/compare/paddle-test-utils-v0.4.1...paddle-test-utils-v0.4.2) (2026-10-27)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump body-parser from 2.3.0 to 2.4.0 ([8fbfdeb](https://github.com/discue/paddle-test-kit/commit/8fbfdeb9fb92e233721274920e19d36a07e15aba))
+* **deps-dev:** bump body-parser from 2.3.0 to 2.4.0 ([efdaca1](https://github.com/discue/paddle-test-kit/commit/efdaca118a51bd9a83b5b294f1f98a8fc785a177))
+* **deps:** bump puppeteer from 25.14.0 to 25.16.0 ([7c9dd40](https://github.com/discue/paddle-test-kit/commit/7c9dd4068b615a003ad0ac8fa36db8c9361165d2))
+* **deps:** bump puppeteer from 25.14.0 to 25.16.0 ([eb3b80d](https://github.com/discue/paddle-test-kit/commit/eb3b80d6e6f9633b7ae1f5c6eab4eba2c39ad4e5))
+
 ## [0.4.1](https://github.com/discue/paddle-test-kit/compare/paddle-test-utils-v0.4.0...paddle-test-utils-v0.4.1) (2026-10-22)
 
 
