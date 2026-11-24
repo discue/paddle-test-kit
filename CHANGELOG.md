@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.2](https://github.com/discue/paddle-test-kit/compare/paddle-test-utils-v0.4.1...paddle-test-utils-v0.4.2) (2026-11-24)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump body-parser from 2.3.0 to 2.4.0 ([8fbfdeb](https://github.com/discue/paddle-test-kit/commit/8fbfdeb9fb92e233721274920e19d36a07e15aba))
+* **deps-dev:** bump body-parser from 2.3.0 to 2.4.0 ([efdaca1](https://github.com/discue/paddle-test-kit/commit/efdaca118a51bd9a83b5b294f1f98a8fc785a177))
+* **deps-dev:** bump eslint from 10.13.0 to 10.14.0 ([2dc5f26](https://github.com/discue/paddle-test-kit/commit/2dc5f26042b360085d0812b93bac95a580466a54))
+* **deps-dev:** bump eslint from 10.13.0 to 10.14.0 ([48d04f8](https://github.com/discue/paddle-test-kit/commit/48d04f87ed9f80114d5e3f5459cdd619af9f0a61))
+* **deps-dev:** bump eslint from 10.14.0 to 10.15.0 ([748999e](https://github.com/discue/paddle-test-kit/commit/748999e5994e4bde8e3004bff8cf18b224689dba))
+* **deps-dev:** bump eslint from 10.14.0 to 10.15.0 ([9050465](https://github.com/discue/paddle-test-kit/commit/905046596c07fedeb69a508fdbb703dfbb76fde2))
+* **deps-dev:** bump globals from 17.13.0 to 17.14.0 ([da11f1f](https://github.com/discue/paddle-test-kit/commit/da11f1fa630e42cb6a64ef81af357f9e7a8e73b7))
+* **deps-dev:** bump globals from 17.13.0 to 17.14.0 ([9aa96b8](https://github.com/discue/paddle-test-kit/commit/9aa96b8a479b3aee09e41be795ee63c238040430))
+* **deps:** bump puppeteer from 25.14.0 to 25.16.0 ([7c9dd40](https://github.com/discue/paddle-test-kit/commit/7c9dd4068b615a003ad0ac8fa36db8c9361165d2))
+* **deps:** bump puppeteer from 25.14.0 to 25.16.0 ([eb3b80d](https://github.com/discue/paddle-test-kit/commit/eb3b80d6e6f9633b7ae1f5c6eab4eba2c39ad4e5))
+* **deps:** bump puppeteer from 25.16.0 to 25.17.0 ([20f5ab3](https://github.com/discue/paddle-test-kit/commit/20f5ab38a84a44d2b4d8a8945c593b1eba787796))
+* **deps:** bump puppeteer from 25.16.0 to 25.17.0 ([dcbdf89](https://github.com/discue/paddle-test-kit/commit/dcbdf89f20616ed757e58b6aeb9378efb56a3912))
+* **deps:** bump puppeteer from 25.17.0 to 25.18.1 ([42193c5](https://github.com/discue/paddle-test-kit/commit/42193c5798eec622e0f256cfa8ffe70ff60a5995))
+* **deps:** bump puppeteer from 25.17.0 to 25.18.1 ([d91ac6f](https://github.com/discue/paddle-test-kit/commit/d91ac6fa44d34576181c8f9b2b44f57556429957))
+
 ## [0.4.1](https://github.com/discue/paddle-test-kit/compare/paddle-test-utils-v0.4.0...paddle-test-utils-v0.4.1) (2026-10-22)
 
 
